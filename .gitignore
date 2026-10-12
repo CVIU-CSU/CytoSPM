@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Outputs and weights
+work_dirs/
+checkpoints/
+outputs/
+logs/
+wandb/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.pdf
+
+# Data: images and annotations are never committed; the class-name
+# embeddings and prompt banks under data/texts and data/promptbank are.
+data/**
+!data/PentaCyto/
+!data/PentaCyto/splits/
+!data/PentaCyto/splits/*.json
+!data/texts/
+!data/texts/**
+!data/promptbank/
+!data/promptbank/**
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp

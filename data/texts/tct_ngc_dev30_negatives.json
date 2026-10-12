@@ -1,0 +1,19 @@
+{
+  "description": "Non-diagnostic and benign PentaCyto categories. They are trained on but excluded from the base-split metric.",
+  "negative_class_names": [
+    "respiratory tract-Impurity",
+    "Serous effusion-Negative samples",
+    "Thyroid gland-NS",
+    "Thyroid gland-Negative samples",
+    "Urine-NHGUC",
+    "TCT_CCD-normal"
+  ],
+  "rationale": {
+    "respiratory tract-Impurity": "PSC I Nondiagnostic -- contaminant/debris",
+    "Serous effusion-Negative samples": "TIS II NFM -- negative for malignancy",
+    "Thyroid gland-NS": "Bethesda I Nondiagnostic -- scant follicular cells",
+    "Thyroid gland-Negative samples": "Bethesda II Benign -- follicular nodular disease",
+    "Urine-NHGUC": "Paris II NHGUC -- negative for high-grade urothelial carcinoma",
+    "TCT_CCD-normal": "Bethesda NILM -- negative for intraepithelial lesion or malignancy"
+  }
+}

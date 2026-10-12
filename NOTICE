@@ -1,0 +1,41 @@
+CytoSPM / PentaCyto
+Copyright (c) 2026 The CytoSPM Authors.
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License v3.0 as published by the Free
+Software Foundation. See the LICENSE file for the full text.
+
+------------------------------------------------------------------------------
+Derived work
+------------------------------------------------------------------------------
+This project is a modified derivative of **WeDetect** (GPL-3.0):
+  Fu, Su, Rao, Lyu, Xie, Zheng. "WeDetect: Fast Open-Vocabulary Object
+  Detection as Retrieval." CVPR 2026. arXiv:2512.12309.
+  Upstream weights: https://huggingface.co/fushh7/WeDetect
+Audited source snapshot: WeChatCV/WeDetect@1903f09542ef39feae1a962da193f4c602d9899f.
+Significant changes over upstream WeDetect include: the PentaCyto multi-domain
+cytopathology benchmark data pipeline (taxonomy, organ masking, base/novel
+splits, structured cytomorphology prompt banks); the CytoSPM structural
+prompt-matching detection head (Top-P / Top-Q mutual selection, three-term
+matching score, structural-matching warm-up); organ-restricted evaluation
+metrics; and the removal of the COCO/LVIS/WeDetect-Uni/WeDetect-Ref surfaces.
+
+------------------------------------------------------------------------------
+Third-party components (used, not necessarily redistributed here)
+------------------------------------------------------------------------------
+- MMDetection / MMEngine / MMCV — Apache License 2.0 — https://github.com/open-mmlab
+- YOLO-World                    — GPL-3.0            — https://github.com/AILab-CVC/YOLO-World
+- MMYOLO                       — GPL-3.0            — https://github.com/open-mmlab/mmyolo
+- YOLOv6                       — GPL-3.0            — https://github.com/meituan/YOLOv6
+- BiomedCLIP (microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224)
+                                — MIT                — https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+- ConvNeXt                      — MIT                — https://github.com/facebookresearch/ConvNeXt
+
+The PentaCyto dataset (cytology images and box annotations) is not included in
+this repository and is not covered by this GPL-3.0 license. It may be released
+in the future under its own terms.
+
+The morphology prompt text is authored by the CytoSPM authors in their own words.
+Medical books named in PROMPT_PROVENANCE.md are references only: no book text,
+figure, table, or scan is redistributed. Complete source snapshots, license texts,
+and modification notices are listed in THIRD_PARTY_LICENSES.md.

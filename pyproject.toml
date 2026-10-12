@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=77", "wheel>=0.43"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cytospm"
+version = "1.0.0"
+description = "CytoSPM: Open-Vocabulary Cytopathology Detection with Structured Prompt Bank"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+license = "GPL-3.0-only"
+license-files = ["LICENSE", "NOTICE"]
+authors = [
+  { name = "Wenjie Li" },
+  { name = "Zishan Xu" },
+  { name = "Jinyang Huang" },
+  { name = "Zhengxin Nie" },
+  { name = "Shichao Kan" },
+  { name = "Yixiong Liang" },
+]
+# torch and mmcv must be installed from their CUDA-specific indexes first.
+dependencies = [
+  "torch==2.1.0",
+  "torchvision==0.16.0",
+  "mmcv==2.1.0",
+  "mmengine==0.10.7",
+  "mmdet==3.3.0",
+  "timm==1.0.22",
+  "open-clip-torch==3.3.0",
+  "numpy==1.26.4",
+  "opencv-python==4.11.0.86",
+  "Pillow==10.4.0",
+  "pycocotools==2.0.11",
+  "terminaltables==3.1.10",
+  "huggingface-hub==0.36.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Repository = "https://github.com/CVIU-CSU/CytoSPM"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cytospm", "cytospm.*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
